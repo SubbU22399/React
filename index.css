@@ -1,153 +1,154 @@
 .layout {
-	background-color: #f0f0f0;
-	bottom: 0;
+  background-color: #f0f0f0;
+  bottom: 0;
 }
 
 .Header {
-	display: flex;
-	justify-content: space-between;
-	border: 1px solid rebeccapurple;
-	background-color: lightsalmon;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rebeccapurple;
+  background-color: lightsalmon;
 }
 .footer {
-	display: flex;
-	position: fixed;
-	height: 5%;
-	bottom: 1px;
-	width: 98.8%;
-	border: 1px solid purple;
-	border-radius: 5%;
-	background-color: lightsalmon;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  position: fixed;
+  height: 5%;
+  bottom: 1px;
+  width: 98.8%;
+  border: 1px solid purple;
+  border-radius: 5%;
+  background-color: lightsalmon;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo > img {
-	width: 100px;
+  width: 100px;
 }
 
 .navigation {
-	padding: auto;
+  padding: auto;
 }
 
 .navigation > ul {
-	padding: auto;
-	margin: 20px;
-	display: flex;
+  padding: auto;
+  margin: 20px;
+  display: flex;
 }
 
 .navigation > ul > li {
-	cursor: pointer;
-	padding: 20px;
-	display: flex;
-	list-style: none;
+  cursor: pointer;
+  padding: 20px;
+  display: flex;
+  list-style: none;
 }
 
 .body {
-	padding: 10px;
-	justify-content: space-between;
-	flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .search {
-	cursor: pointer;
-	justify-content: space-between;
-	padding: 10px;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .restro {
-	padding: 3px;
-	width: 200px;
+  padding: 3px;
+  width: 200px;
 }
 
 .restro:hover {
-	cursor: pointer;
-	border: 1px solid rgb(183, 31, 8);
-	border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(183, 31, 8);
+  border-radius: 10px;
 }
 
 .res-logo {
-	width: 100%;
-	height: 100px;
-	border-radius: 10px;
-	object-fit: cover;
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 .ItemImage {
-	width: 50px;
-	border-radius: 100%;
-	object-fit: cover;
+  width: 50px;
+  border-radius: 100%;
+  object-fit: cover;
 }
 .rating {
-	font-style: oblique;
-	background-color: green;
-	text-shadow: #554949;
+  font-style: oblique;
+  background-color: green;
+  text-shadow: #554949;
+  width: min-content;
 }
 .cuisines {
-	display: flex;
-	flex-wrap: wrap;
-	font-style: italic;
+  display: flex;
+  flex-wrap: wrap;
+  font-style: italic;
 }
 
 .restro-tiles {
-	display: flex;
-	margin: 10px;
-	text-wrap: wrap;
-	flex-wrap: wrap;
-	text-decoration: none;
-	color: black;
+  display: flex;
+  margin: 10px;
+  text-wrap: wrap;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: black;
 }
 
 .shimmer-container {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .shimmer-card {
-	width: 200px;
-	height: 400px;
-	margin: 10px;
-	background-color: #554949;
+  width: 200px;
+  height: 400px;
+  margin: 10px;
+  background-color: #554949;
 }
 .login {
-	border-bottom: #554949;
-	margin: 15px;
-	border-radius: 20%;
-	background-color: brown;
-	text-transform: capitalize;
-	-webkit-text-fill-color: #f0f0f0;
+  border-bottom: #554949;
+  margin: 15px;
+  border-radius: 20%;
+  background-color: brown;
+  text-transform: capitalize;
+  -webkit-text-fill-color: #f0f0f0;
 }
 .search {
-	background-color: rgb(182, 136, 67);
+  background-color: rgb(182, 136, 67);
 }
 .search-box {
-	width: 90%;
-	margin: 10px;
+  width: 90%;
+  margin: 10px;
 }
 .searchBtn {
-	padding: 5px;
+  padding: 5px;
 }
 .Home {
-	text-decoration: none;
-	font-size: x-large;
+  text-decoration: none;
+  font-size: x-large;
 }
 .About {
-	text-decoration: none;
-	font-size: x-large;
+  text-decoration: none;
+  font-size: x-large;
 }
 .Contact {
-	text-decoration: none;
-	font-size: x-large;
+  text-decoration: none;
+  font-size: x-large;
 }
 .Menu {
-	justify-content: space-between;
-	text-align: center;
-	text-transform: none;
+  justify-content: space-between;
+  text-align: center;
+  text-transform: none;
 }
 .Menu-list {
-	text-wrap: wrap;
-	font-style: oblique;
+  text-wrap: wrap;
+  font-style: oblique;
 }
 .ContactInfo {
-	padding: 10px;
-	background-color: rgb(233, 177, 142);
-	border: #910d0d;
-	border-radius: 10%;
+  padding: 10px;
+  background-color: rgb(233, 177, 142);
+  border: #910d0d;
+  border-radius: 10%;
 }
