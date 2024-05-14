@@ -36,10 +36,10 @@ const Body = () => {
   return restrolist.length == 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="search">
+    <div className="body m-4">
+      <div className="search p-4 justify-between">
         <button
-          className="btnFilter"
+          className="btnFilter bg-blue-300 rounded-lg"
           onClick={() => {
             SetFilteredList(
               restrolist.filter((filter) => filter.info.avgRating > 4.2)
@@ -50,15 +50,14 @@ const Body = () => {
         <input
           type="text"
           placeholder="Search...."
-          className="search-box"
-          value={searchText}
+          className="search-box bg-gray-100 w-96 mx-4 items-stretch border-s-orange-50"
           onChange={(e) => {
             setSearchtext(e.target.value);
           }}
         />
         <button
           type="search"
-          className="SearchBth"
+          className="SearchBth bg-blue-400 rounded-lg"
           onClick={() => {
             SetFilteredList(
               restrolist.filter((filter) =>
@@ -71,10 +70,10 @@ const Body = () => {
           search
         </button>
       </div>
-      <div className="restro-tiles">
+      <div className="restro-tiles flex flex-wrap">
         {fileredList.map((data) => (
           <Link
-            className="restro-tiles"
+            className="restro-tiles flex flex-wrap"
             key={data.info.parentId}
             to={"restraunts/" + data.info.id}>
             <RestroTiles resdata={data} />

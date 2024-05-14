@@ -18,18 +18,20 @@ const RestroTiles = (props) => {
     // 	<h6>costForTwo : {resdata.card.card.info.costForTwo}</h6>
     // 	<h6>Distance : {resdata.card.card.info.sla.lastMileTravelString}</h6>
     // </div>
-    <div className="restro">
+    <div className="restro p-1 m-1 w-48 text-sm rounded-lg hover:bg-orange-100">
       <img
-        className="res-logo"
+        className="res-logo w-48 h-24 object-cover rounded-lg"
         alt="resImg"
         src={CDN_URL + cloudinaryImageId}
       />
-      <h5>{name}</h5>
-      <h6 className="cuisines">{cuisines.join(", ")}</h6>
-      <h6 className="rating ">{avgRatingString}⭐️</h6>
+      <h5 className="font-bold text-lg ">{name}</h5>
+      <h6 className="cuisines italic">{cuisines.join(", ")}</h6>
+      <h6 className="rating bg-green-600 rounded-lg w-min">
+        {avgRatingString}⭐️
+      </h6>
       <h6>{slaString}</h6>
       <h6>costForTwo : {costForTwo}</h6>
-      <h6>Distance : {lastMileTravelString}</h6>
+      <h6 className="distance">Distance : {lastMileTravelString}</h6>
     </div>
   );
 };

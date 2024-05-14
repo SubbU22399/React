@@ -1,7 +1,7 @@
 import { VERSION } from "../utils/constant";
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer flex justify-between bg-orange-100 shadow-xl m-4 bottom-0">
       <div className="copyrights">&copy;copy rights</div>
       <div className="address">39/8-11,manhali,123XXXXXXXXXXX</div>
       <div className="mailid">food@gmail.com</div>
