@@ -2,12 +2,13 @@ import RestroTiles from "./RestroTiles";
 import { RESTROLIST_API } from "../utils/constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Body = () => {
+  const [searchText, setSearchtext] = useState("");
   const [restrolist, setRestroList] = useState([]);
   const [fileredList, SetFilteredList] = useState([]);
-  const [searchText, setSearchtext] = useState("");
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -30,6 +31,8 @@ const Body = () => {
   // if (fileredList.length == 0) {
   // 	return <h1>Not Found</h1>;
   // }
+  // const restrolist = useRestrauntList();
+
   return restrolist.length == 0 ? (
     <Shimmer />
   ) : (

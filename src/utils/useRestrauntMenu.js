@@ -1,3 +1,4 @@
+// Custom HOOK for getting the restraunt data.
 import { useEffect, useState } from "react";
 import { ITEMS_API_START } from "./constant";
 
