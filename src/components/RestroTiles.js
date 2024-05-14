@@ -35,5 +35,29 @@ const RestroTiles = (props) => {
     </div>
   );
 };
+export const openRestraunts = (RestroTiles) => {
+  return (props) => {
+    return (
+      <div>
+        <lable className="bg-green-600 text-white absolute box-border rounded-lg">
+          Open
+        </lable>
+        <RestroTiles {...props} />
+      </div>
+    );
+  };
+};
+export const closedRestraunts = (RestroTiles) => {
+  return (props) => {
+    return (
+      <div>
+        <lable className="bg-red-600 text-white absolute box-border rounded-lg">
+          Closed
+        </lable>
+        <RestroTiles {...props} />
+      </div>
+    );
+  };
+};
 
 export default RestroTiles;

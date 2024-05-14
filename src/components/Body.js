@@ -1,4 +1,4 @@
-import RestroTiles from "./RestroTiles";
+import RestroTiles, { openRestraunts, closedRestraunts } from "./RestroTiles";
 import { RESTROLIST_API } from "../utils/constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
@@ -9,6 +9,8 @@ const Body = () => {
   const [restrolist, setRestroList] = useState([]);
   const [fileredList, SetFilteredList] = useState([]);
 
+  const RestroTilesOpen = openRestraunts(RestroTiles);
+  const RestroTilesClosed = closedRestraunts(RestroTiles);
   useEffect(() => {
     fetchData();
   }, []);
@@ -16,8 +18,6 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(RESTROLIST_API);
     const json = await data.json();
-
-    console.log(json);
     setRestroList(
       //optional Chaining ( learn about it)
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle.restaurants
@@ -76,7 +76,11 @@ const Body = () => {
             className="restro-tiles flex flex-wrap"
             key={data.info.parentId}
             to={"restraunts/" + data.info.id}>
-            <RestroTiles resdata={data} />
+            {data.info.isOpen ? (
+              <RestroTilesOpen resdata={data} />
+            ) : (
+              <RestroTilesClosed resdata={data} />
+            )}
           </Link>
         ))}
       </div>
