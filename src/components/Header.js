@@ -29,7 +29,11 @@ const Header = () => {
               Contact
             </Link>
           </li>
-          <li>Cart</li>
+          <li>
+            <Link className="Cart" to="/Cart">
+              Cart{" "}
+            </Link>
+          </li>
           <button
             className="login"
             onClick={() => {

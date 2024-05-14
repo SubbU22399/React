@@ -2,7 +2,7 @@ import RestroTiles from "./RestroTiles";
 import { RESTROLIST_API } from "../utils/constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [searchText, setSearchtext] = useState("");
