@@ -2,6 +2,7 @@ import { ITEM_URL } from "../utils/constant";
 import { useParams } from "react-router-dom";
 import useRestrauntMenu from "../utils/useRestrauntMenu";
 import Shimmer from "./Shimmer";
+import ItemCategory from "./ItemCatogory";
 
 const Restraunts = () => {
   const { ResId } = useParams();
@@ -13,13 +14,19 @@ const Restraunts = () => {
   const { itemCards } =
     resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
       ?.card;
+  const catagories =
+    resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
 
   return (
-    <div className="Menu">
-      <h1> {name}</h1>
-      <h3> {areaName}</h3>
+    <div className="Menu text-center">
+      <h1 className="font-bold text-2xl"> {name}</h1>
+      <h3 className="font-semibold"> {areaName}</h3>
       <h2>Menu</h2>
-      <ul>
+      {/* <ul>
         {itemCards.map((item) => (
           <li className="Menu-list" key={item.card.info.id}>
             {item.card.info.name}- {item.card.info.price / 100} -
@@ -29,7 +36,13 @@ const Restraunts = () => {
             />
           </li>
         ))}
-      </ul>
+      </ul> */}
+      {catagories.map((catagory) => (
+        <ItemCategory
+          data={catagory.card.card}
+          key={catagory.card.card.title}
+        />
+      ))}
     </div>
   );
 };
