@@ -5,6 +5,7 @@ import useStatus from "../utils/useStatus";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("login");
+  const [attribute, setAttribute] = useState("null");
   const onlineStatus = useStatus();
   return (
     <div className="header flex justify-between bg-orange-100 shadow-xl m-4 rounded-lg">
@@ -35,9 +36,12 @@ const Header = () => {
             </Link>
           </li>
           <button
-            className="login"
+            className={attribute}
             onClick={() => {
               btnName == "login" ? setBtnName("Logout") : setBtnName("login");
+              btnName == "login"
+                ? setAttribute("bg-red-600  rounded-lg font-bold")
+                : setAttribute("bg-green-600 rounded-lg font-bold");
             }}>
             {btnName}
           </button>
