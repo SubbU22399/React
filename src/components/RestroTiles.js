@@ -18,7 +18,7 @@ const RestroTiles = (props) => {
     // 	<h6>costForTwo : {resdata.card.card.info.costForTwo}</h6>
     // 	<h6>Distance : {resdata.card.card.info.sla.lastMileTravelString}</h6>
     // </div>
-    <div className="restro p-1 m-1 w-48 text-sm rounded-lg hover:bg-orange-100">
+    <div className="restro p-1 m-1 w-48 text-sm rounded-lg">
       <img
         className="res-logo w-48 h-24 object-cover rounded-lg"
         alt="resImg"

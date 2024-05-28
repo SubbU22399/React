@@ -7,6 +7,7 @@ const Header = () => {
   const [btnName, setBtnName] = useState("login");
   const [attribute, setAttribute] = useState("null");
   const onlineStatus = useStatus();
+
   return (
     <div className="header flex justify-between bg-orange-100 shadow-xl m-4 rounded-lg">
       <div className="logo">
@@ -16,24 +17,32 @@ const Header = () => {
         <ul className="flex p-5 m-5 space-x-10">
           <li>{onlineStatus ? "Online : 🟢" : "Offline : 🔴"}</li>
           <li>
-            <Link className="Home" to="/">
-              Home
-            </Link>
+            <button className="bg-orange-600 rounded-lg">
+              <Link className="Home" to="/">
+                Home
+              </Link>
+            </button>
           </li>
           <li>
-            <Link className="About" to="/about">
-              About
-            </Link>
+            <button className="bg-orange-600 rounded-lg">
+              <Link className="About" to="/about">
+                About
+              </Link>
+            </button>
           </li>
           <li>
-            <Link className="Contact" to="/contact">
-              Contact
-            </Link>
+            <button className="bg-orange-600 rounded-lg">
+              <Link className="Contact" to="/contact">
+                Contact
+              </Link>
+            </button>
           </li>
           <li>
-            <Link className="Cart" to="/Cart">
-              Cart{" "}
-            </Link>
+            <button className="bg-orange-600 rounded-lg">
+              <Link className="Cart" to="/Cart">
+                Cart{" "}
+              </Link>
+            </button>
           </li>
           <button
             className={attribute}
