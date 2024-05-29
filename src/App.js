@@ -16,26 +16,21 @@ const Cart = lazy(() => import("./components/Cart"));
 const AppLayout = () => {
   const [theme, setTheme] = useState("light");
   const [attribute1, setAttribute1] = useState("null");
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setAttribute1((prevAttribute) =>
+      prevAttribute === "bg-white" ? "bg-orange-300  " : "bg-white"
+    );
+  };
 
   return (
-    <div className={`app ${attribute1} `}>
+    <div className={`app ${attribute1}  `}>
       <div className="content">
-        <h1>{theme === "light" ? "Light Theme" : "Dark Theme"}</h1>
-        <button
-          className="rounded-lg bg-orange-400 "
-          onClick={() => {
-            // setTheme((prevTheme) =>
-            //   prevTheme === "light" ? "dark" : "light"
-            // );
-            theme == "light" ? setTheme("dark") : setTheme("light");
-            theme == "light"
-              ? setAttribute1(" bg-orange-700 ")
-              : setAttribute1("bg-white ");
-          }}>
-          Theme
-        </button>
-        <div className="layout" id="Layout">
-          <Header />
+        {/* <h1>{theme === "light" ? "Light Theme" : "Dark Theme"}</h1> */}
+        <div
+          className="layout flex flex-col h-screen justify-between"
+          id="Layout">
+          <Header toggleTheme={toggleTheme} theme={theme} />
           <Outlet />
           <Footer />
         </div>

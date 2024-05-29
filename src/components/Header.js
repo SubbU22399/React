@@ -3,7 +3,7 @@ import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useStatus from "../utils/useStatus";
 
-const Header = () => {
+const Header = ({ toggleTheme, theme }) => {
   const [btnName, setBtnName] = useState("login");
   const [attribute, setAttribute] = useState("null");
   const onlineStatus = useStatus();
@@ -44,15 +44,20 @@ const Header = () => {
               </Link>
             </button>
           </li>
-          <button
-            className={attribute}
-            onClick={() => {
-              btnName == "login" ? setBtnName("Logout") : setBtnName("login");
-              btnName == "login"
-                ? setAttribute("bg-red-600  rounded-lg font-bold")
-                : setAttribute("bg-green-600 rounded-lg font-bold");
-            }}>
-            {btnName}
+          <li>
+            <button
+              className={attribute}
+              onClick={() => {
+                btnName == "login" ? setBtnName("Logout") : setBtnName("login");
+                btnName == "login"
+                  ? setAttribute("bg-red-600  rounded-lg font-bold")
+                  : setAttribute("bg-green-600 rounded-lg font-bold");
+              }}>
+              {btnName}
+            </button>
+          </li>
+          <button className="rounded-lg bg-orange-400" onClick={toggleTheme}>
+            {theme === "light" ? "Dark Theme" : "Light Theme"}
           </button>
         </ul>
       </div>
